@@ -1,0 +1,46 @@
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.alpha,
+.omega {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.align_center,
+.align_right {
+  text-align: left;
+}
+
+#navigation a {
+	color: #fff;
+	xtext-decoration: none;
+	padding: 3px 4px;
+	margin-right: 12px;
+	line-height: 22px;
+	width: 100%;
+}
+
+#navigation a:hover {
+	background: #027D4D;
+	color: #fff;
+	background-color: #000;
+	border-radius:5px;
+    -moz-border-radius:5px;
+    background: -moz-linear-gradient(top, #027D4D 0%, #478847 51%, #0A550A 51%, #0A4A09 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#027D4D), color-stop(51%,#478847), color-stop(51%,#0A550A), color-stop(100%,#0A4A09));
+	color: #eee;
+}

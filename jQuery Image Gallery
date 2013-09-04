@@ -1,0 +1,72 @@
+<html>
+    <!--
+        Author:  Andrew Pallant
+        Date:    July 2013
+
+        Image Gallery jQuery Code - Created for a client to replace a flash solution.
+        Code has been dumbed down for sample purposes.  Actually HTML code is more dynamic, but the jQuery code is the same no mater what.
+    -->
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                // Initialize Controls
+                jQuery("[id^=imgBig]").hide();
+                
+                // Set Mouse Over Events
+                jQuery("[id^=thumb]").mouseover(function () { jQuery(this).fadeTo(0, 0.6); });
+                jQuery("[id^=thumb]").mouseout(function () { jQuery(this).fadeTo(0, 1); });
+                
+
+                // Set Thumb Indexed Values
+                for (var x = 0; x < 7; x++) {
+                    jQuery("#thumb" + x).attr('indexedVal', x);
+                }
+
+                // Thumb Click Events
+                jQuery("[id^=thumb]").click(function () {
+                    jQuery("[id^=imgBig]").hide();
+
+                    jQuery("#imgBig" + jQuery(this).attr('indexedVal')).fadeIn("Slow");
+                });
+
+                // Set Initial Image
+                jQuery("#imgBig0").show();
+            });
+        </script>
+    
+    </head>
+
+    <body>
+        <div class="imgGallery">
+	        <div class="BigImageContainer">
+		        <img id='imgBig0' src='image1.jpg' />
+		        <img id='imgBig1' src='image2.jpg' />
+		        <img id='imgBig2' src='image3.jpg' />
+		        <img id='imgBig3' src='image4.jpg' />
+	        </div>
+	        <div class="thumbCtrl">
+		        <ul>
+		            <li class="thumb">
+			            <a href="#" onclick="return false;"><img id='thumb0' src='image1.jpg' /></a>
+		            </li>
+		            <li class="thumb">
+			            <a href="#" onclick="return false;"><img id='thumb1' src='image2.jpg' /></a>
+		            </li>
+		            <li class="thumb">
+			            <a href="#" onclick="return false;"><img id='thumb2' src='image3.jpg' /></a>
+		            </li>
+		            <li class="thumb">
+			            <a href="#" onclick="return false;"><img id='thumb3' src='image4.jpg' /></a>
+		            </li>
+		        </ul>
+	        </div>
+        </div>
+
+    </body>
+
+</html>
+
+
+ 
